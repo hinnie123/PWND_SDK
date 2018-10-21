@@ -1,0 +1,52 @@
+#pragma once
+
+// PWND (4.17.2.0) SDK
+
+#ifdef _MSC_VER
+	#pragma pack(push, 0x8)
+#endif
+
+namespace SDK
+{
+//---------------------------------------------------------------------------
+//Classes
+//---------------------------------------------------------------------------
+
+// BlueprintGeneratedClass Base_RocketJump_TP_MuzzleFlash_FX.Base_RocketJump_TP_MuzzleFlash_FX_C
+// 0x0039 (0x03C9 - 0x0390)
+class ABase_RocketJump_TP_MuzzleFlash_FX_C : public APwndFX
+{
+public:
+	struct FPointerToUberGraphFrame                    UberGraphFrame;                                           // 0x0390(0x0008) (Transient, DuplicateTransient)
+	class UParticleSystemComponent*                    Enemy_MuzzleFlash;                                        // 0x0398(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class UParticleSystemComponent*                    Ally_MuzzleFlash;                                         // 0x03A0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Enemy;                                                    // 0x03A8(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	class USceneComponent*                             Ally;                                                     // 0x03B0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	float                                              Timeline_0_FadeAlphaOverEmitterTime_8F50194C493FC9FAE4FD53BCE26E46B4;// 0x03B8(0x0004) (ZeroConstructor, IsPlainOldData)
+	TEnumAsByte<ETimelineDirection>                    Timeline_0__Direction_8F50194C493FC9FAE4FD53BCE26E46B4;   // 0x03BC(0x0001) (ZeroConstructor, IsPlainOldData)
+	unsigned char                                      UnknownData00[0x3];                                       // 0x03BD(0x0003) MISSED OFFSET
+	class UTimelineComponent*                          Timeline_1;                                               // 0x03C0(0x0008) (BlueprintVisible, ZeroConstructor, IsPlainOldData)
+	bool                                               Active;                                                   // 0x03C8(0x0001) (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData)
+
+	static UClass* StaticClass()
+	{
+		static auto ptr = UObject::FindClass("BlueprintGeneratedClass Base_RocketJump_TP_MuzzleFlash_FX.Base_RocketJump_TP_MuzzleFlash_FX_C");
+		return ptr;
+	}
+
+
+	void UserConstructionScript();
+	void Timeline_0__FinishedFunc();
+	void Timeline_0__UpdateFunc();
+	void ReceiveBeginPlay();
+	void OnSetActive(bool* bIsActive);
+	void OnSetTeamNum(unsigned char* OldTeamNum, unsigned char* NewTeamNum);
+	void ExecuteUbergraph_Base_RocketJump_TP_MuzzleFlash_FX(int EntryPoint);
+};
+
+
+}
+
+#ifdef _MSC_VER
+	#pragma pack(pop)
+#endif
